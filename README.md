@@ -105,7 +105,13 @@ Una vez dentro de la carpeta del frontend, se debe instalar las dependencias con
 npm install
 ```
 
-Iniciaremos el frontend con el siguiente comando:
+Compilaremos el frontend con el siguiente comando:
+
+```bash
+npm run build
+```
+
+E iniciaremos el frontend con el siguiente comando:
 
 ```bash
 npm start
