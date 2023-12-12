@@ -96,7 +96,7 @@ Nuestro servidor se ejecutará en el puerto 3000, por lo que se podrá acceder a
 Teniendo el backend instalado, se debe acceder a la carpeta del frontend con el siguiente comando:
 
 ```bash
-cd frontend
+cd poke_front
 ```
 
 Una vez dentro de la carpeta del frontend, se debe instalar las dependencias con el siguiente comando:
