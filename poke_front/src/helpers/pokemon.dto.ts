@@ -1,11 +1,12 @@
 export interface Pokemon {
   id: number;
   name: string;
+  description?: string;
   type: string[];
-  height: string;
-  weight: number;
   image: string;
-  evolution: any;
+  evolutedFrom: string | null;
+  profile?: any;
+  base?: any;
 }
 
 export interface PokemonsResponse {

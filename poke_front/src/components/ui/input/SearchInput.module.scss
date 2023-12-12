@@ -1,24 +1,56 @@
 .container {
-  height: 35px;
-  width: 170px;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
   background-color: rgb(255, 255, 255);
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
-  padding: 0 0.5rem;
-  border: 1.5px solid var(--bg-color);
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: height 0.3s ease-in-out;
   &_input {
-    width: 120px;
+    width: 100%;
     height: 100%;
     border: none;
     outline: none;
-    font-size: 1rem;
-    caret-color: var(--font-color);
+    font-size: 1.1rem;
+    text-align: center;
     &::placeholder {
-      color: var(--font-color);
+      color: var(--font-color-light);
     }
+  }
+  &_icon {
+    position: absolute;
+    right: 2rem;
+    top: 120%;
+    opacity: 0;
+    transition: top 0.5s ease-in-out, transform 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 1;
+    &.active {
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      opacity: 1;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    &_input {
+      font-size: 1.5rem;
+    }
+    &_icon {
+      font-size: 2rem;
+    }
+    height: 6rem;
   }
 }

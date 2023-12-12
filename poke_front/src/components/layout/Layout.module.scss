@@ -1,0 +1,89 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  flex: 1;
+  transition: background 0.3s ease-in-out;
+  @media screen and (min-width: 800px) {
+    padding: 2rem;
+  }
+  &.home {
+    background: var(--pikachu-yellow-color);
+  }
+  &.detail {
+    background: var(--bg-color);
+  }
+}
+.top_left_triangle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 40px solid #000;
+  border-right: 40px solid transparent;
+  z-index: 1;
+  @media screen and (min-width: 800px) {
+    border-top: 70px solid #000;
+    border-right: 70px solid transparent;
+  }
+}
+.top_right_triangle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 40px solid #000;
+  border-left: 40px solid transparent;
+  z-index: 1;
+  @media screen and (min-width: 800px) {
+    border-top: 70px solid #000;
+    border-left: 70px solid transparent;
+  }
+}
+
+.bottom_left_semicircle {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--pikachu-red-color);
+  bottom: -45px;
+  left: -45px;
+  z-index: 1;
+  @media screen and (min-width: 800px) {
+    width: 180px;
+    height: 180px;
+    bottom: -90px;
+    left: -90px;
+  }
+}
+
+.bottom_right_semicircle {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--pikachu-red-color);
+  bottom: -45px;
+  right: -45px;
+  z-index: 1;
+  @media screen and (min-width: 800px) {
+    width: 180px;
+    height: 180px;
+    bottom: -90px;
+    right: -90px;
+  }
+}
+
+.top_left_triangle,
+.top_right_triangle,
+.bottom_left_semicircle,
+.bottom_right_semicircle {
+  transition: all 0.5s ease-in-out;
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

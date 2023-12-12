@@ -1,10 +1,12 @@
 :root {
-  --font-family: "Helvetica Neue";
+  --font-family: "Tahoma";
   --font-size: 14px;
   --font-color: #3e3e3e;
-  --font-color-light: #666464;
-  --bg-color: #bcbec3;
-  --pikkachu-color: #ffe62c;
+  --font-color-light: #bdbbbb;
+  --bg-color: #d0cfcf;
+  --bg-color-dark: #bbbaba;
+  --pikachu-yellow-color: #ffe62c;
+  --pikachu-red-color: #ea2a2a;
   --max-width: 1200px;
 }
 
@@ -14,19 +16,16 @@
   padding: 0;
   margin: 0;
   &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
   }
   &::-webkit-scrollbar-track {
-    background: var(--bg-color);
+    background: var(--pikachu-yellow-color);
   }
   &::-webkit-scrollbar-thumb {
-    background: var(--font-color);
+    background: var(--pikachu-red-color);
     mix-blend-mode: difference;
     border-radius: 2px;
-  }
-  @media only screen and (max-width: 800px) {
-    cursor: default;
   }
 }
 
@@ -86,11 +85,4 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-  margin-top: 3.5rem;
-  flex: 1;
 }

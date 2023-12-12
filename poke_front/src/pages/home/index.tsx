@@ -114,10 +114,10 @@ const Home = () => {
         <PokemonList pokemons={pokemons} />
       </section>
       {isLoaderActive && <Spinner />}
-      {!hasMorePages && (
+      {search && !pokemons.length && (
         <div className={styles.home_list__end}>
           <p className={styles.home_list__end_text}>
-            {search ? "No hay más resultados" : "No hay más pokemons"}
+            {"No hay pokemons con ese nombre"}
           </p>
         </div>
       )}

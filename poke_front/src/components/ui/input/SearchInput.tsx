@@ -51,15 +51,17 @@ const SearchInput = () => {
         name="text"
         className={styles.container_input}
         id="input"
-        placeholder="Search"
+        placeholder="Filtra pokemons por nombre..."
         onChange={(e) => setSearch(e.target.value)}
         value={search || ""}
       />
-      {search && (
-        <span className={styles.container_icon} onClick={() => setSearch(null)}>
-          x
-        </span>
-      )}
+
+      <span
+        className={`${styles.container_icon} ${search ? styles.active : ""}`}
+        onClick={() => setSearch(null)}
+      >
+        X
+      </span>
     </div>
   );
 };

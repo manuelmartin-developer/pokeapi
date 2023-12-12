@@ -41,11 +41,19 @@ sequelizeConnection
     initialData.map(async (pokemon: any) => {
       const parsedPokemon = {
         name: pokemon.name.english,
+        description: pokemon.description,
         type: pokemon.type,
-        height: pokemon.profile.height || "unknown",
-        weight: pokemon.profile.weight || "unknown",
+        profile: pokemon.profile,
+        base: pokemon.base,
         image: pokemon.image.hires,
-        evolution: pokemon.evolution || null
+        evolutedFrom:
+          (pokemon.evolution &&
+            pokemon.evolution.prev &&
+            pokemon.evolution.prev.length &&
+            initialData.find(
+              (p: any) => p.id === Number(pokemon.evolution.prev[0])
+            )?.name.english) ||
+          null
       };
       await Pokemon.create(parsedPokemon);
     });

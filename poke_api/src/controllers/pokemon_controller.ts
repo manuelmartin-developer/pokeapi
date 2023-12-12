@@ -11,7 +11,7 @@ export const getAllPokemons = async (
   try {
     const { size, page, search } = req.query;
 
-    const pokemons = await Pokemon.findAndCountAll({
+    const pokemons = await Pokemon.scope("listScope").findAndCountAll({
       limit: size ? Number(size) : 10,
       offset: page ? (Number(page) - 1) * Number(size) : 0,
       where: {
