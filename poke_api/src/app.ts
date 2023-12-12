@@ -15,7 +15,7 @@ app.use(
   })
 ); // for parsing application/x-www-form-urlencoded
 const corsOpts = {
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173", "http://localhost:4173"],
   methods: ["GET"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }; // CORS options

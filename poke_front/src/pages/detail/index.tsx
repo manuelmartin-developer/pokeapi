@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Pokemon } from "../../helpers/pokemon.dto";
 import styles from "./DetailView.module.scss";
 import { motion } from "framer-motion";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { usePokemonStore } from "../../store/pokemon";
 import Chip from "../../components/ui/chip";
 import { useNavigate } from "react-router-dom";
