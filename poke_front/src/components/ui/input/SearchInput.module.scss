@@ -1,0 +1,24 @@
+.container {
+  height: 35px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  border: 1.5px solid var(--bg-color);
+  &_input {
+    width: 120px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    caret-color: var(--font-color);
+    &::placeholder {
+      color: var(--font-color);
+    }
+  }
+}
