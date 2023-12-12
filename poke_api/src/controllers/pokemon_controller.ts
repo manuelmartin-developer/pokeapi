@@ -13,17 +13,12 @@ export const getAllPokemons = async (
 
     const pokemons = await Pokemon.findAndCountAll({
       limit: size ? Number(size) : 10,
-      offset: page ? Number(page) * Number(size) : 0,
+      offset: page ? (Number(page) - 1) * Number(size) : 0,
       where: {
         ...(search && {
           [Op.or]: [
             {
               name: {
-                [Op.like]: `%${search}%`
-              }
-            },
-            {
-              type: {
                 [Op.like]: `%${search}%`
               }
             }
@@ -33,7 +28,11 @@ export const getAllPokemons = async (
       order: [["id", "ASC"]]
     });
 
-    res.status(200).json({ pokemons });
+    res.status(200).json({
+      total: pokemons.count,
+      hasMorePages: pokemons.count > Number(size) * Number(page),
+      pokemons: pokemons.rows
+    });
   } catch (error) {
     next(error);
   }
