@@ -1,5 +1,22 @@
 # Pokemon full stack
 
+## Demo
+
+Para ver una demo del proyecto, se puede acceder a la siguiente dirección: https://pokemon.manuelmartin.dev/
+
+## Tabla de contenidos
+
+- [Descripción](#descripción)
+- [Pre-requisitos](#pre-requisitos)
+  - [Instalación de Docker](#instalación-de-docker)
+  - [Instanciar una imagen de MySQL](#instanciar-una-imagen-de-mysql)
+  - [Crear la base de datos](#crear-la-base-de-datos)
+- [Instalación](#instalación)
+  - [Instalación del backend](#instalación-del-backend)
+  - [Instalación del frontend](#instalación-del-frontend)
+- [Uso](#uso)
+- [Licencia](#licencia)
+
 ## Descripción
 
 Este proyecto es una aplicación web que permite visualizar los "pokemones" de la primera generación, además de poder filtrarlos por tipo y ver sus detalles.
