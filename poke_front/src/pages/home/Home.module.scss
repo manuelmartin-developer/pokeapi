@@ -18,4 +18,16 @@
     justify-content: center;
     align-items: flex-start;
   }
+  &_list__end {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    &_text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+  }
 }
